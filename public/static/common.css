@@ -1,0 +1,13 @@
+.distance-right {
+    margin-right: 10px;
+}
+
+.be-pointer {
+    cursor: pointer;
+}
+
+.list-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
