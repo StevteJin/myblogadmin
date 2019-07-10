@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 //配置html的模板引擎用的
 const exphbs = require('express-handlebars');
+//compressin是用来开启gzip的，可以加快文件加载速度
+var compression = require('compression')
 //首页
 var index = require('./routes/index');
 
@@ -22,6 +24,18 @@ app.engine('html', exphbs({
   extname: '.html'
 }));
 app.set('view engine', 'html');
+
+//尽量在其他中间件前使用compression
+app.use(compression());
+//过滤
+app.use(compression({ filter: shouldCompress }));
+function shouldCompress(req, res) {
+  if (req.headers['x-no-compression']) {
+    // 这里就过滤掉了请求头包含'x-no-compression'
+    return false
+  }
+  return compression.filter(req, res)
+}
 
 //加载日志中间件
 app.use(logger('dev'));
