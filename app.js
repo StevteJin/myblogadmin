@@ -3,7 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+//配置html的模板引擎用的
+const exphbs = require('express-handlebars');
 //首页
 var index = require('./routes/index');
 
@@ -15,8 +16,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 //设置模板引擎为html
-var ejs = require('ejs');
-app.engine('html', ejs.__express);
+app.engine('html', exphbs({
+  layoutsDir: '',
+  defaultLayout: '',
+  extname: '.html'
+}));
 app.set('view engine', 'html');
 
 //加载日志中间件
@@ -47,7 +51,8 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  console.log('我是错误',err);
+  res.render('error',{err:err});
 });
 
 module.exports = app;
