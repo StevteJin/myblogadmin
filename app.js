@@ -51,8 +51,12 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  console.log('我是错误',err);
-  res.render('error',{err:err});
+  console.log('我是错误', err.status);
+  if (err.status == 404) {
+    res.redirect('/');
+  } else {
+    res.render('error', { err: err });
+  }
 });
 
 module.exports = app;
