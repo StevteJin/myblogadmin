@@ -6,8 +6,19 @@
     cursor: pointer;
 }
 
-.list-title {
+.list-big-title {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    width: 60%;
+}
+
+.clear-both {
+    overflow: hidden;
+}
+
+.see-all {
+    line-height: 26px;
+    margin-top:20px;
+    margin-bottom:10px;
 }
