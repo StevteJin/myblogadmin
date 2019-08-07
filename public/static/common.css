@@ -19,6 +19,653 @@
 
 .see-all {
     line-height: 26px;
-    margin-top:20px;
-    margin-bottom:10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*新版*/
+
+/*start*/
+
+article {
+    width: 1100px;
+    margin: auto;
+    overflow: hidden
+}
+
+.leftbox {
+    width: 70%;
+    float: left;
+    overflow: hidden;
+}
+
+.blank {
+    height: 20px;
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+    clear: both
+}
+
+/*h2*/
+
+.hometitle {
+    padding: 0 10px;
+    line-height: 40px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: #000 2px solid;
+    position: relative;
+}
+
+.hometitle span {
+    float: right;
+    font-weight: normal;
+    font-size: 14px;
+    height: 42px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    font-weight: bold;
+}
+
+.hometitle span a {
+    display: block;
+    float: right;
+    position: relative;
+    overflow: hidden;
+    margin-right: 20px;
+    color: #555;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.hometitle span a:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 20px;
+    border-radius: 10px;
+    background: #000;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -10px
+}
+
+/*特别推荐*/
+
+.tuijian {
+    background: #fff;
+    overflow: hidden;
+    width: 100%;
+    clear: both;
+    border-radius: 10px;
+}
+
+.tuijian ul {
+    overflow: hidden;
+    padding: 20px 10px;
+    position: relative;
+}
+
+.tuijian ul:before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 1px;
+    height: 100%;
+    left: 10px
+}
+
+.tuijian ul:after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 1px;
+    bottom: 20px;
+    left: 0;
+}
+
+.tuijian li {
+    float: left;
+    width: 33.33%;
+    border-bottom: #ccc 1px solid;
+    border-left: #ccc 1px solid;
+    overflow: hidden;
+    padding: 20px;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.tpic {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #CCC;
+}
+
+.tpic img {
+    display: inline-block;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    vertical-align: middle;
+    transition: all .5s ease-out .1s;
+}
+
+.tuijian li b {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.tuijian li span {
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    font-size: 14px;
+    height: 62px;
+}
+
+.readmore {
+    margin: 10px 0 0 0;
+    color: #096;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.readmore:hover {
+    color: #096;
+    text-decoration: none;
+}
+
+.readmore:before {
+    content: "+";
+    color: #063
+}
+
+.tuijian li:hover {
+    background: #fff;
+    box-shadow: #ccc 1px 1px 8px;
+}
+
+.tuijian li:hover img {
+    transform: scale(1.05)
+}
+
+/*最新文章*/
+
+.newblogs {
+    background: #fff;
+    overflow: hidden;
+    width: 100%;
+    clear: both;
+    border-radius: 10px;
+    margin: 20px 0
+}
+
+h3.blogtitle {
+    line-height: 30px;
+    margin: 10px 0;
+}
+
+h3.blogtitle a {
+    color: #555;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+h3.blogtitle:hover a {
+    color: #000
+}
+
+.blogpic {
+    overflow: hidden;
+    width: 30%;
+    max-height: 100px;
+    display: block;
+    float: left;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.newblogs ul {
+    padding: 10px;
+    overflow: hidden
+}
+
+.newblogs li {
+    border-bottom: #ccc 1px solid;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.autor {
+    width: 100%;
+    overflow: hidden;
+    clear: both;
+    margin: 20px 0 0 0;
+    display: inline-block;
+    color: #838383;
+    font-size: 12px
+}
+
+.autor span {
+    margin: 0 10px 0 0;
+    padding-left: 20px
+}
+
+.autor span a {
+    color: #096;
+}
+
+.autor span a:hover {
+    text-decoration: none;
+}
+
+.lm {
+    background: url(../../assets/img/newsbg01.png) no-repeat left center
+}
+
+.dtime {
+    background: url(../../assets/img/newsbg02.png) no-repeat left center
+}
+
+.viewnum {
+    background: url(../../assets/img/newsbg04.png) no-repeat left center
+}
+
+.pingl {
+    background: url(../../assets/img/like.jpg) no-repeat left center
+}
+
+.blogpic img {
+    width: 100%;
+}
+
+.bloginfo p {
+    color: #888;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.more {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/*右边*/
+
+.rightbox {
+    width: 28%;
+    float: right;
+    overflow: hidden;
+}
+
+/*关于我*/
+
+.abbox {
+    margin: 20px auto;
+    width: 1100px;
+    overflow: hidden;
+    clear: both
+}
+
+.aboutme {
+    background: #FFF;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ab_title {
+    text-align: center;
+    position: relative;
+    margin: 20px;
+    font-size: 22px;
+    color: #555;
+    font-weight: bold;
+}
+
+.ab_title a {
+    font-size: 22px;
+    color: #555;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ab_title:before {
+    content: "";
+    width: 25%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: 8px
+}
+
+.ab_title:after {
+    content: "";
+    width: 25%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    right: 0;
+    bottom: 8px
+}
+
+.ab_con {
+    line-height: 30px;
+    padding: 10px;
+}
+
+.ab_con p {
+    background: #f6f6f6;
+    margin: 5px 0;
+    padding-left: 10px;
+    border-radius: 5px;
+    text-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50px;
+    margin: auto;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px
+}
+
+/*search*/
+
+.search {
+    background: #FFF;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.input_text {
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    width: 70%;
+    height: 26px;
+    line-height: 26px;
+    background-color: #f2f2f2;
+    float: left;
+    border-radius: 5px 0 0 5px;
+    outline: none
+}
+
+.input_submit {
+    background-color: #333;
+    color: #FFF;
+    float: left;
+    width: 20%;
+    border: none;
+    cursor: pointer;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 0 5px 5px 0;
+    outline: none
+}
+
+/*排行*/
+
+.paihang {
+    background: #FFF;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0
+}
+
+.paihang ul {
+    padding: 10px;
+}
+
+.paihang ul li {
+    border-bottom: solid 1px #EAEAEA;
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    overflow: hidden;
+}
+
+.paihang ul li b {
+    height: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+
+.paihang li i {
+    width: 100px;
+    height: 90px;
+    overflow: hidden;
+    display: block;
+    border: #efefef 1px solid;
+    float: left;
+    margin-right: 10px;
+}
+
+.paihang li i img {
+    height: 100%;
+    margin: auto;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.paihang ul li p {
+    line-height: 24px;
+    color: #888;
+}
+
+.paihang ul li a {
+    color: #555;
+}
+
+.paihang ul li a:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.paihang ul li:hover {
+    border-bottom: #000 1px solid;
+}
+
+/* 鼠标放上去的效果 */
+
+.paihang ul li:hover p {
+    color: #000;
+}
+
+.paihang ul li:hover b a {
+    color: #000;
+}
+
+.paihang ul li:hover i img {
+    transform: scale(1.03)
+}
+
+/*links*/
+
+.links {
+    width: 100%;
+    background: #FFF;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0
+}
+
+.links ul {
+    padding: 0 30px 30px 30px
+}
+
+.links ul li {
+    line-height: 24px;
+    border: 1px solid #ccc;
+    margin: 0 0 10px 0;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.links ul li a {
+    color: #555;
+    text-decoration: none;
+}
+
+.links ul li:hover {
+    background: #fff;
+    box-shadow: #000 1px 1px 10px;
+}
+
+.links ul li:hover a {
+    color: #096
+}
+
+/*wx*/
+
+.weixin {
+    width: 100%;
+    background: #FFF;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0
+}
+
+.weixin img {
+    width: 100%;
+    height: auto
+}
+
+/*开始自适应的部分*/
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    article {
+        width: 90%;
+        overflow: hidden
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1023px) {
+    article {
+        width: 90%;
+        overflow: hidden
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    article {
+        width: 96%;
+        overflow: hidden
+    }
+    .rightbox {
+        display: none
+    }
+    .leftbox {
+        width: 100%
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    article {
+        width: 96%;
+        overflow: hidden
+    }
+    .rightbox {
+        display: none
+    }
+    .leftbox {
+        width: 100%
+    }
+    .autor .more {
+        display: none
+    }
+    .news_infos img {
+        max-width: 400px
+    }
+    .dasbox {
+        display: none
+    }
+    .diggit {
+        margin: auto!important;
+        float: none!important;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    article {
+        width: 96%;
+        overflow: hidden
+    }
+    .tuijian li {
+        width: 50%;
+        padding: 6px
+    }
+    .hometitle span {
+        display: none
+    }
+    .rightbox {
+        display: none
+    }
+    .leftbox {
+        width: 100%
+    }
+    .autor .more, .viewnum {
+        display: none
+    }
+    .blogpic {
+        display: block;
+        width: 100%;
+        margin: auto;
+        max-height: 120px;
+        float: none
+    }
+    .blogpic img {
+        margin: auto
+    }
+    .bloginfo p {
+        clear: both
+    }
+    .dasbox {
+        display: none
+    }
+    .diggit {
+        margin: auto!important;
+        float: none!important;
+    }
+    .news_infos img {
+        width: 100%
+    }
 }
